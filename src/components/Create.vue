@@ -2,7 +2,7 @@
   <div class="create">
     <div class="field" @submit.prevent="addNewProduct">
       <div class="control">
-        <h2 class="titulo_registro">Registro de productos</h2>
+        <h2 class="titulo_registro">Registro de Servicios</h2>
         <input
           class="input"
           type="text"
@@ -33,7 +33,7 @@
     </div>
 
     <div>
-      <h2>Productos registrados</h2>
+      <h2>Servicios registrados</h2>
       <table class="table is-striped">
         <thead>
           <tr>
@@ -106,7 +106,7 @@ export default {
       };
       axios
         .post(
-          "https://us-central1-tddg3-e867b.cloudfunctions.net/products/product",
+          "https://us-central1-jerichox-16759.cloudfunctions.net/products/product",
           prod,
           { headers: { "Content-type": "application/json" } }
         )
@@ -124,7 +124,7 @@ export default {
     findProduct(id) {
       axios
         .get(
-          `https://us-central1-tddg3-e867b.cloudfunctions.net/products/product/${id}`,
+          `https://us-central1-jerichox-16759.cloudfunctions.net/products/product/${id}`,
           { headers: { "Content-type": "application/json" } }
         )
         .then((response) => {
@@ -142,7 +142,7 @@ export default {
       };
       axios
         .put(
-          `https://us-central1-tddg3-e867b.cloudfunctions.net/products/product/${id}`,
+          `https://us-central1-jerichox-16759.cloudfunctions.net/products/product/${id}`,
           prod,
           { headers: { "Content-type": "application/json" } }
         )
@@ -161,7 +161,7 @@ export default {
       if (confirm) { */
       axios
         .delete(
-          `https://us-central1-tddg3-e867b.cloudfunctions.net/products/product/${id}`,
+          `https://us-central1-jerichox-16759.cloudfunctions.net/products/product/${id}`,
           { headers: { "Content-type": "application/json" } }
         )
         .then(() => {
@@ -202,7 +202,7 @@ h2 {
   margin-right: 10px;
 }
 .control {
-  background-color: #9feecb;
+  background-color: #F4FA58;
   border-radius: 10px;
   width: 40%;
   padding: 30px;
