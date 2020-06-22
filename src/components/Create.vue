@@ -184,7 +184,7 @@ h2 {
   margin: auto;
 }
 .titulo_registro {
-  color: white;
+  color: black;
   padding-bottom: 15px;
 }
 .input {

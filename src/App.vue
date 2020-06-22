@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <navbar :brand="'Te Asisto'"  />
+    <navbar :brand="'TE ASISTO'"  />
     <router-view />
     <div></div>
 <Footer />

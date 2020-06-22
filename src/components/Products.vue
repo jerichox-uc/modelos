@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <section class="hero is-primary is-bold">
+    <section class="hero is-warning is-bold">
       <div class="hero-body">
         <div class="container">
           <div style="display: inline-block;">
-            <h1 class="title">Nuestros Productos</h1>
-            <h2 class="subtitle">Primary subtitle</h2>
+            <h1 class="title">Nuestros Servicios</h1>
+            <h2 class="subtitle">Elige el que necesites</h2>
           </div>
           <div class="is-pulled-right" style="display: inline-block;">
             <!-- <label for="searchBox">Buscar </label>

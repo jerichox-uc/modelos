@@ -13,7 +13,7 @@
           :class="{ 'is-active': displayMenu }"
           @click="displayMenu = !displayMenu"
         >
-        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">
+        <img src="https://i.ibb.co/y45tnG6/Logo-te-asisto.png" alt="TeAsisto" width="112" height="28">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -65,7 +65,10 @@
             </a>
 
             <div class="navbar-dropdown">
-              <a class="navbar-item">Preferencias</a>
+          <router-link class="navbar-item" to="/about"
+            >Nosotros</router-link
+          >
+
               <a class="navbar-item" @click="showCart">Ver Carrito</a>
               <hr class="navbar-divider" />
               <a class="navbar-item" @click="logout">Cerrar Sesión</a>
@@ -130,6 +133,6 @@ export default {
 <style lang="scss" scoped>
 nav {
   height: 4rem;
-  background-color: rgba(31, 202, 74, 0.219);
+  background-color: #F4FA58;
 }
 </style>
