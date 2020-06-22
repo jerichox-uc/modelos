@@ -16,9 +16,14 @@
             <div class="field">
               <label class="label">Email</label>
               <div class="control has-icons-left has-icons-right">
-                <input type="email" name="email" id="email" placeholder="Email"
-                v-model="credentials.email"
-                class="input">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  v-model="credentials.email"
+                  class="input"
+                />
                 <span class="icon is-small is-left">
                   <i class="mdi mdi-email"></i>
                 </span>
@@ -28,9 +33,14 @@
             <div class="field">
               <label class="label">Contraseña</label>
               <div class="control has-icons-left has-icons-right">
-                <input type="password" name="password" id="password" placeholder="*******"
-                v-model="credentials.password"
-                class="input">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="*******"
+                  v-model="credentials.password"
+                  class="input"
+                />
                 <span class="icon is-small is-left">
                   <i class="mdi mdi-key"></i>
                 </span>
@@ -38,7 +48,9 @@
             </div>
             <!-- field submit -->
             <div class="field">
-              <button class="button is-primary is-pulled-right" @click="login">Acceder</button>
+              <button class="button is-primary is-pulled-right" @click="login">
+                Acceder
+              </button>
             </div>
             <div class="is-clearfix"></div>
           </form>
@@ -50,51 +62,61 @@
 </template>
 
 <script>
+/* import { Auth } from "../services/Auth";
+ */
+import firebase from "firebase";
 
-import firebaseConfig from '@/firebase';
-import Firebase from 'firebase';
-Firebase.initializeApp(firebaseConfig);
 export default {
-  name: '',
+  name: "Login",
   components: {},
   props: {},
   data() {
     return {
       credentials: {
-        email: '',
-        password: ''
+        email: "",
+        password: "",
       },
-      formHasErrors: false
-    }
+      formHasErrors: false,
+    };
   },
   methods: {
     login(e) {
-      e.preventDefault()
-      this.formHasErrors = this.credentials.email === '' || this.credentials.password === ''
-      if(!this.formHasErrors) {
+      e.preventDefault();
+      this.formHasErrors =
+        this.credentials.email === "" || this.credentials.password === "";
+      if (!this.formHasErrors) {
         // try login
-        Firebase
-        .auth()
-        .signInWithEmailAndPassword(
-          this.credentials.email,
-          this.credentials.password
-        )
-        .then(() => {
-          let user = this.credentials.email
-          this.$store.dispatch('updateUser', user)
-          this.$router.push('home')
-        })
-        .catch(() => {
-          console.log('Usuario no autenticado')
-        })
+        firebase
+          .auth()
+          .signInWithEmailAndPassword(
+            this.credentials.email,
+            this.credentials.password
+          )
+          .then(() => {
+            let user = this.credentials.email;
+            this.$store.dispatch("updateUser", user);
+            this.$router.push("/");
+          })
+          .catch(() => {
+            console.log("Usuario no autenticado");
+          });
+        /*  Auth.login(this.credentials)
+          .then((response) => {
+            let user = response.data;
+            this.$store.dispatch("updateUser", user);
+            this.$router.push("/");
+          })
+          .catch((error) => {
+            alert(error);
+          }); */
       }
-    }
+    },
   },
   computed: {},
   watch: {},
   created() {},
-  mounted() {}
-}
+  mounted() {},
+};
 </script>
 
 <style lang="scss" scoped>
