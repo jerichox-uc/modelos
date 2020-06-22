@@ -13,6 +13,7 @@
           :class="{ 'is-active': displayMenu }"
           @click="displayMenu = !displayMenu"
         >
+        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>

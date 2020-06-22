@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Start from "./views/Start.vue";
 import Create from "./components/Create.vue";
 import firebase from "firebase";
 
@@ -26,6 +27,14 @@ const router = new Router({
       path: "/create",
       name: "create",
       component: Create,
+      meta: {
+        requireLogin: true,
+      },
+    },
+    {
+      path: "/start",
+      name: "start",
+      component: Start,
     },
     {
       path: "/about",
@@ -35,6 +44,11 @@ const router = new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue"),
+    },
+    {
+      path: "*",
+      name: "NotFound",
+      component: () => import("./views/NotFound.vue"),
     },
     {
       path: "/login",
