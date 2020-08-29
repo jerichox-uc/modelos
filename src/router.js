@@ -64,9 +64,7 @@ router.beforeEach((to, from, next) => {
   let authRequired = to.matched.some((route) => route.meta.requireLogin);
   if (!user && authRequired) {
     next("login");
-  } /* else if (user && !authRequired) {
-    next("home");
-  }  */ else {
+  } else {
     next();
   }
 });
