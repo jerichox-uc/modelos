@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Start from "./views/Start.vue";
-import Create from "./components/Create.vue";
+import Ordenes from "./components/Ordenes.vue";
 import firebase from "firebase";
 
 Vue.use(Router);
@@ -24,9 +24,9 @@ const router = new Router({
       },
     },
     {
-      path: "/create",
-      name: "create",
-      component: Create,
+      path: "/ordenes",
+      name: "ordenes",
+      component: Ordenes,
       meta: {
         requireLogin: true,
       },

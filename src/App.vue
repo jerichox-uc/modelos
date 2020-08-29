@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <navbar :brand="'TE ASISTO'"  />
+    <navbar :brand="'Classicmodels'"  />
+   <div></div>
     <router-view />
-    <div></div>
+    <div id="foot">
 <Footer />
+</div>
   </div>
 </template>
 
@@ -26,4 +28,16 @@ export default {
 
 
 <style lang="scss">
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+#foot {
+   position: absolute;
+ bottom: 0;
+ width: 100%;
+}
 </style>

@@ -2,8 +2,8 @@
   <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      <strong>Te Asisto</strong> por <a href="https://github.com/jerichox-uc/">Victor Saavedra</a>. Siguenos en nuestras Redes
-      <a href="http://www.teasisto.cl">TeAsisto.cl</a>.
+      <strong>Classicmodels</strong> por <a href="https://github.com/jerichox-uc/">Victor Saavedra</a>. Siguenos en nuestras Redes
+      <a href="http://www.classicmodels.cl">Classicmodels.cl</a>.
     </p>
   </div>
 </footer>

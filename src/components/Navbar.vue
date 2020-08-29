@@ -13,7 +13,7 @@
           :class="{ 'is-active': displayMenu }"
           @click="displayMenu = !displayMenu"
         >
-        <img src="https://i.ibb.co/y45tnG6/Logo-te-asisto.png" alt="TeAsisto" width="112" height="28">
+       
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -45,8 +45,8 @@
               >
             </span>
           </a>
-          <router-link class="navbar-item" to="/create"
-            >Crear Producto</router-link
+          <router-link class="navbar-item" to="/Ordenes"
+            >Ordenes</router-link
           >
 
           <router-link
@@ -132,7 +132,7 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  height: 4rem;
-  background-color: #F4FA58;
+  height: 5rem;
+  background-color: black;
 }
 </style>
